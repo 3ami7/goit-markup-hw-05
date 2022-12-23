@@ -56,7 +56,9 @@
                         EFEKTYWNE ROZWIĄZANIA<br />
                         DLA WASZEGO BIZNESU
                     </h1>
-                    <button type="button">Zamów usługe</button>
+                    <button class="modal-btn" type="button" data-modal-open>
+                        Zamów usługe
+                    </button>
                 </div>
             </section>
 
@@ -135,28 +137,37 @@
                     <h2>Czym sie zajmujemy</h2>
                     <ul class="item-grid-wrapper">
                         <li>
-                            <img
-                                src="images/programming.jpg"
-                                alt="Programista pracujacy przy swoim biurku"
-                                width="370"
-                                height="294"
-                            />
+                            <div class="">
+                                <img
+                                    src="images/programming.jpg"
+                                    alt="Programista pracujacy przy swoim biurku"
+                                    width="370"
+                                    height="294"
+                                />
+                                <p class="">APLIKACJE KOMPUTEROWE</p>
+                            </div>
                         </li>
                         <li>
-                            <img
-                                src="images/applications.jpg"
-                                alt="Programista tworzy design aplikacji"
-                                width="370"
-                                height="294"
-                            />
+                            <div class="">
+                                <img
+                                    src="images/applications.jpg"
+                                    alt="Programista tworzy design aplikacji"
+                                    width="370"
+                                    height="294"
+                                />
+                                <p class="">APLIKACJE MOBILNE</p>
+                            </div>
                         </li>
                         <li>
-                            <img
-                                src="images/design.jpg"
-                                alt="Programista wybiera barwe kolorystyczna do design"
-                                width="370"
-                                height="294"
-                            />
+                            <div class="">
+                                <img
+                                    src="images/design.jpg"
+                                    alt="Programista wybiera barwe kolorystyczna do design"
+                                    width="370"
+                                    height="294"
+                                />
+                                <p class="">ROZWIĄZANIA GRAFICZNE</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -579,5 +590,13 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close-btn" data-modal-close>
+                    x
+                </button>
+            </div>
+        </div>
+        <script src="./modal.js"></script>
     </body>
 </html>
