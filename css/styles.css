@@ -259,7 +259,7 @@ body {
     border: none; 
     padding: 6px 22px;
     border-radius: 4px;
-    transition-property: background-color, color, box-shadow;
+    transition-property: background-color, color, box-shadow, border-radius;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -283,6 +283,11 @@ body {
     background-color: var(--white-bg);
     list-style: none;
     margin-bottom: 50px;
+}
+.set-card li {
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .set-card li:hover {
     box-shadow: 0px 1px 1px var(--box-shadow-port3), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -415,7 +420,10 @@ body {
     padding: 12px;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    transition-property: fill, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
 .team-icon-wrapper a:hover {
     background-color: var(--light-blue-bg);
@@ -431,20 +439,25 @@ body {
     column-gap: 30px;
     margin-top: 50px;
 }
+.client-icon {
+    fill: var(--icon-team);
+}
 .client-icon-wrapper li {
     border: 1px solid var(--icon-team);
     border-radius: 4px;
     padding: 16px 32px;
-}
-.client-icon {
-    fill: var(--icon-team)
-}
-.client-icon-wrapper li:hover {
-    border: 1px solid var(--text-blue);
+    cursor: pointer;
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon-wrapper li:hover svg {
     fill: var(--text-blue);
 }
+.client-icon-wrapper li:hover {
+    border: 1px solid var(--text-blue);
+}
+
 .contact {
     font-size: 14px;
     line-height: 1.14;
@@ -467,11 +480,14 @@ body {
     justify-content: center;
     align-items: center;  
     background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media {
     fill: var(--white-bg);
 }
-.social-media-wrapper li:hover {
+.social-media-wrapper a:hover {
     background-color: var(--light-blue-bg);
     border-radius: 50%;
 }
@@ -581,4 +597,8 @@ body {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transform: scale(1);
+    transition-property: transform, border-radius;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
 }
